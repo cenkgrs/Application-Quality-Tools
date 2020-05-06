@@ -1,0 +1,14 @@
+.main{
+    margin: auto;
+    top: 35%;
+    left: 27%;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.select-type{
+    width:50% !important;
+    margin: auto;
+}
