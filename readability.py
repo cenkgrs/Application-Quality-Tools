@@ -6,6 +6,7 @@ from selenium import webdriver
 import time
 
 
+
 def get_readability(url):
     response = requests.get(url)
     data = response.text
@@ -14,26 +15,20 @@ def get_readability(url):
     td = soup.find_all("td", attrs={'class': None})
 
     result = soup.find("p", attrs={'class': "flush-top small-copy"})
+    result = result.getText()
 
-    readability = {
-        "result" : result.getText(),
-        "Flesch Kincaid Reading Ease": td[0].string,
-        "Flesch Kincaid Grade Level	": td[1].string,
-        "Gunning Fog Score": td[3].string,
-        "SMOG Index": td[4].string,
-        "Coleman Liau Index": td[5].string,
-        "Automated Readability Index": td[6].string,
-        "No. of sentences": td[7].string,
-        "No. of words": td[8].string,
-        "No. of complex words": td[9].string,
-        "Average words  per sentence": td[10].string,
-        "Average syllables per word": td[11].string
-    }
+    readability = []
+    readability.append(result)
+
+    for i in td:
+
+        if i.string is not None:
+            readability.append(str(i.string))
 
     return readability
 
 
-def get_read():
+def get_read(url):
     # Open the website
     driver = webdriver.Firefox()
     driver.get('https://www.webfx.com/tools/read-able/')
@@ -41,7 +36,7 @@ def get_read():
     input = driver.find_element_by_id('uri')
     input.send_keys('')
     time.sleep(2)
-    input.send_keys("cenkgurses.website")
+    input.send_keys(url)
     time.sleep(2)
 
     button = driver.find_element_by_xpath('//*[@id="tabs-1"]/form/fieldset/div/input[2]')

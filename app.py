@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 from youtube_test import youtube_search, read_file
+from readability import get_read
 
 app = Flask(__name__)
 
@@ -38,11 +39,22 @@ def run_test():
     return "success"
 
 
+@app.route('/readability-test', methods=["POST"])
+def run_read():
+    response = request.get_json()
+    url = response["url"]
+    data = get_read(url)
+    print(data)
+
+    return jsonify(data)
+
+
 @app.after_request
 def add_headers(response):
     response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     return response
+
 
 if __name__ == '__main__':
     app.run()

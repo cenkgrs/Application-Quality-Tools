@@ -18,7 +18,7 @@ $(document).ready(function(){
         $.ajax({
             url: "http://localhost:5000/selenium-test",
             type: "POST",
-            contentType: "application/json",
+            contentType: "application/json;charset=UTF-8",
             data: JSON.stringify({"type": type})
         }).done(function(data) {
             console.log(data)
@@ -30,6 +30,25 @@ $(document).ready(function(){
         });
     })
 
+
+    $(".send-read").click(function(){
+        url = $("#url").val()
+        $.ajax({
+            contentType: "application/json",
+            url: '/readability-test',
+            type: 'POST',
+            data: JSON.stringify({'url': url}),
+            success: function (result) {
+                 console.log(result)
+                 //sessionStorage.setItem("readabality", JSON.stringify(result));
+                 sessionStorage.setItem('readabality', result);
+                 location.href = "/dashboard"
+            },
+            error: function (result) {
+                alert("error!");
+            }
+        });   //end ajax
+    })
 
 
 });

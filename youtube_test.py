@@ -90,5 +90,3 @@ def read_file():
 
     return new_lines
 
-
-read_file()
