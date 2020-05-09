@@ -1,6 +1,23 @@
-'07-05-202016:52:52' INFO Succesfully completed - Number
-'07-05-202016:53:01' INFO Succesfully completed - Number
-'07-05-202016:53:24' INFO Succesfully completed - Number
-'07-05-202016:53:25' INFO Succesfully completed - Number
-'07-05-202016:53:28' INFO Succesfully completed - Number
-'07-05-202016:53:37' INFO Succesfully completed - Number
+2020-05-09 15:29:07,144 INFO Succesfully completed google opened
+2020-05-09 15:29:07,228 INFO Succesfully completed search youtube
+2020-05-09 15:29:10,595 INFO Succesfully completed open youtube link
+2020-05-09 15:29:15,690 WARNING Timed out waiting for page to load search on youtube
+2020-05-09 15:29:15,691 INFO 127.0.0.1 - - [09/May/2020 15:29:15] "[37mPOST /selenium-test HTTP/1.1[0m" 200 -
+2020-05-09 15:29:15,709 INFO 127.0.0.1 - - [09/May/2020 15:29:15] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,532 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,549 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,559 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /static/css/sidebar.css HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,562 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /static/css/selenium.css HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,567 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /static/css/dashboard.css HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,571 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /static/index.js HTTP/1.1[0m" 200 -
+2020-05-09 15:30:52,572 INFO 127.0.0.1 - - [09/May/2020 15:30:52] "[37mGET /static/dashboard.js HTTP/1.1[0m" 200 -
+2020-05-09 15:30:53,857 INFO 127.0.0.1 - - [09/May/2020 15:30:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-05-09 15:31:06,490 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+2020-05-09 15:31:06,518 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-05-09 15:31:06,532 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /static/css/dashboard.css HTTP/1.1[0m" 200 -
+2020-05-09 15:31:06,532 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /static/css/selenium.css HTTP/1.1[0m" 200 -
+2020-05-09 15:31:06,534 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /static/index.js HTTP/1.1[0m" 200 -
+2020-05-09 15:31:06,535 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /static/dashboard.js HTTP/1.1[0m" 200 -
+2020-05-09 15:31:06,535 INFO 127.0.0.1 - - [09/May/2020 15:31:06] "[37mGET /static/css/sidebar.css HTTP/1.1[0m" 200 -
+2020-05-09 15:31:07,157 INFO 127.0.0.1 - - [09/May/2020 15:31:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-05-09 15:31:11,508 INFO 127.0.0.1 - - [09/May/2020 15:31:11] "[37mGET /readability HTTP/1.1[0m" 200 -

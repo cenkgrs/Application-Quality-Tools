@@ -1,0 +1,23 @@
+.logs{
+    width: 28%;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    background: #343a40;
+    box-shadow: 4px 4px 6px 4px #343a40;
+}
+
+.logs h1{
+    color: #ffffffe6;
+    text-align: center;
+}
+
+.log-item{
+    display: block;
+    width: 100%;
+    height:auto;
+    color: #7e8d9c;
+    margin: 0 10px;
+    padding: 10px;
+    word-break: break-word;
+}
