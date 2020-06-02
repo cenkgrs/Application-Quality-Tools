@@ -24,7 +24,7 @@ $(document).ready(function(){
             console.log(data)
             if(data){
                 sessionStorage.setItem('youtube_logs', data);
-                location.href = "/dashboard"
+                open_dashboard()
             }
 
         });
@@ -61,11 +61,11 @@ function send_ajax(url, test_type){
                  //sessionStorage.setItem("readability", JSON.stringify(result));
 
                  if (test_type == "performance"){
-                    sessionStorage.setItem("performance", result.FCI);
+                    fill_performance_result(result)
                  }else{
                     sessionStorage.setItem("readability", result);
                  }
-                 location.href = "/dashboard"
+                 open_dashboard()
             },
             error: function (result) {
                 alert("error!");
@@ -73,20 +73,7 @@ function send_ajax(url, test_type){
         });   //end ajax
 }
 
-function run_readability(url){
-     $.ajax({
-            contentType: "application/json",
-            url: '/readability-test',
-            type: 'POST',
-            data: JSON.stringify({'url': url}),
-            success: function (result) {
-                 console.log(result)
-                 //sessionStorage.setItem("readability", JSON.stringify(result));
-                 sessionStorage.setItem('readability', result);
-                 location.href = "/dashboard"
-            },
-            error: function (result) {
-                alert("error!");
-            }
-        });   //end ajax
+function fill_performance_result(result){
+    open_dashboard()
+    console.log(result)
 }

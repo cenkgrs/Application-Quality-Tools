@@ -1,6 +1,63 @@
-2020-05-09 22:59:02,126 INFO Succesfully completed Google opened
-2020-05-09 22:59:02,236 INFO Succesfully completed Search youtube
-2020-05-09 22:59:05,530 INFO Succesfully completed open youtube link
-2020-05-09 22:59:10,613 WARNING Timed out waiting for page to load Search on youtube
-2020-05-09 22:59:10,614 INFO 127.0.0.1 - - [09/May/2020 22:59:10] "[37mPOST /selenium-test HTTP/1.1[0m" 200 -
-2020-05-09 22:59:10,635 INFO 127.0.0.1 - - [09/May/2020 22:59:10] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+2020-06-03 01:32:00,985 INFO Succesfully completed Google opened
+2020-06-03 01:32:01,107 INFO Succesfully completed Search youtube
+2020-06-03 01:32:04,147 ERROR Exception on /selenium-test [POST]
+Traceback (most recent call last):
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cenk/Masaüstü/Python/itms/app.py", line 36, in run_test
+    data = youtube_search()
+  File "/home/cenk/Masaüstü/Python/itms/youtube_test.py", line 52, in youtube_search
+    driver.find_element_by_xpath('/html/body/div[6]/div[2]/div[9]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div[1]/a/h3').click()
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: /html/body/div[6]/div[2]/div[9]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div[1]/a/h3
+
+2020-06-03 01:32:04,206 INFO 127.0.0.1 - - [03/Jun/2020 01:32:04] "[35m[1mPOST /selenium-test HTTP/1.1[0m" 500 -
+2020-06-03 01:32:51,615 INFO 127.0.0.1 - - [03/Jun/2020 01:32:51] "[37mOPTIONS /selenium-test HTTP/1.1[0m" 200 -
+2020-06-03 01:33:02,444 INFO Succesfully completed Google opened
+2020-06-03 01:33:02,537 INFO Succesfully completed Search youtube
+2020-06-03 01:33:05,660 ERROR Exception on /selenium-test [POST]
+Traceback (most recent call last):
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cenk/Masaüstü/Python/itms/app.py", line 36, in run_test
+    data = youtube_search()
+  File "/home/cenk/Masaüstü/Python/itms/youtube_test.py", line 52, in youtube_search
+    driver.find_element_by_xpath('/html/body/div[6]/div[2]/div[9]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div[1]/a/h3').click()
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/cenk/Masaüstü/Python/itms/env/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: /html/body/div[6]/div[2]/div[9]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div[1]/a/h3
+
+2020-06-03 01:33:05,661 INFO 127.0.0.1 - - [03/Jun/2020 01:33:05] "[35m[1mPOST /selenium-test HTTP/1.1[0m" 500 -

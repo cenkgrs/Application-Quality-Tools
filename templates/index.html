@@ -4,20 +4,31 @@
 
 <body>
 
+    <div>
+        {% include 'partials/sidebar.html' %}
 
-<div>
-    {% include 'partials/sidebar.html' %}
+    </div>
 
-</div>
+        <section class="section" id="index-section">
+            <div class="main">
+                {% include 'partials/form.html' %}
+            </div>
+        </section>
 
-<div class="main">
+        <section class="section" id="dashboard-section" style="display:none">
+            {% include 'dashboard.html' %}
+        </section>
 
+        <section class="section" id="readability-section" style="display:none">
+            <div class="main">
+                {% include 'readability.html' %}
+            </div>
+        </section>
 
+        <section class="section" id="selenium-section" style="display:none">
+            {% include 'sel_tool.html' %}
+        </section>
 
+    </body>
 
-{% include 'partials/form.html' %}
-
-</div>
-
-</body>
 </html>

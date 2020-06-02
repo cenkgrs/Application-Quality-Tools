@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+})
 readability_texts = [
     "Flesch Kincaid Reading Ease",
     "Gunning Fog Score",
@@ -13,26 +15,9 @@ readability_texts = [
     "Average words  per sentence",
     "Average syllables per word",
 ]
-console.log(sessionStorage)
-
 readability_metrics = [ "", "80", "6", "4", "6", "15", "2", ]
 
-    readability = []
-    var readability = sessionStorage.getItem('readability');
-    console.log(readability)
-
-    performance = []
-    var performance = sessionStorage.getItem('performance');
-    console.log(performance)
-    console.log(performance[1])
-    console.log(performance[2])
-    console.log(performance[3])
-
-    if (performance.hasOwnProperty("FCI")){
-        console.log(performance.FCI)
-    }
-
-
+function fill_logs(){
     // Showing Logs
     line_array = []
     var line_array = sessionStorage.getItem('youtube_logs');
@@ -51,6 +36,12 @@ readability_metrics = [ "", "80", "6", "4", "6", "15", "2", ]
             $(".log-items").append(item)
         })
     }
+}
+
+function fill_readability(){
+    readability = []
+    var readability = sessionStorage.getItem('readability');
+    console.log(readability)
 
     // Showing Readability Scores
     if ( readability != null) {
@@ -92,4 +83,4 @@ readability_metrics = [ "", "80", "6", "4", "6", "15", "2", ]
             $(".readability-items").append("<br/>")
         })
     }
-})
+}
