@@ -19,6 +19,10 @@
 
 }
 
+.main-header{
+    font-family:monospace; color:#7e8d9c; font-weight:600; text-align:center
+}
+
 
 .select-type{
     width:50% !important;

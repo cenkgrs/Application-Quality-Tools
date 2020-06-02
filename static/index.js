@@ -33,23 +33,60 @@ $(document).ready(function(){
 
     $(".send-read").click(function(){
         url = $("#url").val()
-        $.ajax({
+
+        send_ajax(url, "readability")
+    })
+
+    $(".form-send").click(function(){
+
+        test_type = $('select[name=select-type] option').filter(':selected').val()
+        url = $("#form_url").val()
+
+        send_ajax(url, test_type)
+
+        console.log(test_type)
+    })
+
+
+});
+
+function send_ajax(url, test_type){
+     $.ajax({
             contentType: "application/json",
-            url: '/readability-test',
+            url: '/'+ test_type +'-test',
             type: 'POST',
             data: JSON.stringify({'url': url}),
             success: function (result) {
                  console.log(result)
-                 //sessionStorage.setItem("readabality", JSON.stringify(result));
-                 sessionStorage.setItem('readabality', result);
+                 //sessionStorage.setItem("readability", JSON.stringify(result));
+
+                 if (test_type == "performance"){
+                    sessionStorage.setItem("performance", result.FCI);
+                 }else{
+                    sessionStorage.setItem("readability", result);
+                 }
                  location.href = "/dashboard"
             },
             error: function (result) {
                 alert("error!");
             }
         });   //end ajax
-    })
+}
 
-
-});
-
+function run_readability(url){
+     $.ajax({
+            contentType: "application/json",
+            url: '/readability-test',
+            type: 'POST',
+            data: JSON.stringify({'url': url}),
+            success: function (result) {
+                 console.log(result)
+                 //sessionStorage.setItem("readability", JSON.stringify(result));
+                 sessionStorage.setItem('readability', result);
+                 location.href = "/dashboard"
+            },
+            error: function (result) {
+                alert("error!");
+            }
+        });   //end ajax
+}

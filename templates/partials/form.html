@@ -1,15 +1,16 @@
 <form>
   <div class="form-group">
-    <label for="url">URL of the site</label>
-    <input type="url" class="form-control" id="url" placeholder="Enter the site url you want to test">
-    <small id="emailHelp" class="form-text text-muted">You will redirected to your dashboard for the results.</small>
+    <label for="form_url">URL of the site</label>
+    <input type="url" class="form-control" id="form_url" placeholder="Enter the site url you want to test">
+    <small class="form-text text-muted">You will redirected to your dashboard for the results.</small>
   </div>
   <div class="form-group">
-    <select class="form-control select-type">
-        <option>Readability</option>
+    <select class="form-control select-type" name="select-type">
+        <option value="readability">Readability</option>
+        <option value="performance">Performance</option>
 
     </select>
   </div>
 
-  <button type="submit" class="btn btn-dark">Submit</button>
+  <button type="button" class="btn btn-dark form-send">Submit</button>
 </form>

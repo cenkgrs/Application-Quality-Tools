@@ -13,13 +13,27 @@ readability_texts = [
     "Average words  per sentence",
     "Average syllables per word",
 ]
+console.log(sessionStorage)
 
 readability_metrics = [ "", "80", "6", "4", "6", "15", "2", ]
 
     readability = []
-    var readability = sessionStorage.getItem('readabality');
+    var readability = sessionStorage.getItem('readability');
     console.log(readability)
 
+    performance = []
+    var performance = sessionStorage.getItem('performance');
+    console.log(performance)
+    console.log(performance[1])
+    console.log(performance[2])
+    console.log(performance[3])
+
+    if (performance.hasOwnProperty("FCI")){
+        console.log(performance.FCI)
+    }
+
+
+    // Showing Logs
     line_array = []
     var line_array = sessionStorage.getItem('youtube_logs');
 
@@ -38,6 +52,7 @@ readability_metrics = [ "", "80", "6", "4", "6", "15", "2", ]
         })
     }
 
+    // Showing Readability Scores
     if ( readability != null) {
         readability = readability.split(",")
 

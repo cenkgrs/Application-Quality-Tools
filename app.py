@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, make_response
 from youtube_test import youtube_search, read_file
 from readability import get_read
+from performance import get_performance
 
 app = Flask(__name__)
 
@@ -44,6 +45,17 @@ def run_read():
     response = request.get_json()
     url = response["url"]
     data = get_read(url)
+    print(data)
+
+    return jsonify(data)
+
+
+@app.route('/performance-test', methods=["POST"])
+def run_performance_test():
+    response = request.get_json()
+    url = response["url"]
+
+    data = get_performance(url)
     print(data)
 
     return jsonify(data)

@@ -6,7 +6,6 @@ from selenium import webdriver
 import time
 
 
-
 def get_readability(url):
     response = requests.get(url)
     data = response.text
@@ -36,15 +35,19 @@ def get_read(url):
     input = driver.find_element_by_id('uri')
     input.send_keys('')
     time.sleep(2)
+    # Write site url to input
     input.send_keys(url)
     time.sleep(2)
 
+    # Click to send button
     button = driver.find_element_by_xpath('//*[@id="tabs-1"]/form/fieldset/div/input[2]')
     button.click()
 
     url = driver.current_url
 
     driver.close()
+
+    # Send opened page to get_readability function
     readability = get_readability(url)
 
     return readability
